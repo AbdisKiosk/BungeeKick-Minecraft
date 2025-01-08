@@ -69,7 +69,7 @@ public class PlayerListener implements Listener {
         {
 	        String msg = BungeeKick.config.getString("KickMessage");
 	        msg = ChatColor.translateAlternateColorCodes('&', msg);
-	        String kmsg = ChatColor.stripColor(BaseComponent.toLegacyText(ev.getKickReasonComponent()));
+	        String kmsg = BaseComponent.toLegacyText(ev.getKickReasonComponent());
 	        msg = msg + kmsg;
 	        ev.getPlayer().sendMessage(new TextComponent(msg));
         }
